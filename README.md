@@ -32,11 +32,15 @@ Launch a new EC2 instance using Amazon Linux 2 AMI. Choose an instance type that
 
 ![EC2 Instance Creation](images/1.png)
 
+
+
 ### 2. Connect to the EC2 Instance
 
 Use MobaXterm or another SSH client to connect to your EC2 instance securely using your private key.
 
 ![MobaXterm Connection](images/mobaxtream.png)
+
+
 
 ### 3. Install Java JDK
 
@@ -46,6 +50,8 @@ Update the package lists and install the Java Development Kit (JDK):
 sudo apt update
 sudo apt install openjdk-11-jre
 ```
+
+
 
 ### 4. Add Jenkins Repository and Install Jenkins
 
@@ -58,7 +64,9 @@ sudo apt-get update
 sudo apt-get install jenkins
 ```
 
-5. Open Port 8080
+
+
+### 5. Open Port 8080
 Edit the security group inbound rules to allow traffic on port 8080.
 ![Edit Inbound Rules](images/4.png)
 
