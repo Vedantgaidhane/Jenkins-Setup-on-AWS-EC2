@@ -15,6 +15,8 @@ This repository contains a detailed guide and necessary scripts to set up Jenkin
   - [7. Unlock Jenkins](#7-unlock-jenkins)
   - [8. Set Up Jenkins](#8-set-up-jenkins)
   - [9. Jenkins is Ready!!](#9-Jenkins-is-Ready!!)
+
+- [Docker Slave Configuration](#Docker-Slave-Configuration)
 - [Scripts](#scripts)
 - [Images](#images)
 - [Contributing](#contributing)
@@ -113,3 +115,13 @@ Once you are done with the above steps, it is better to restart Jenkins again.
 ```bash
 http://<ec2-instance-public-ip>:8080/restart
 ```
+
+## Scripts
+
+To simplify the installation process, use the provided scripts:
+
+install-jdk.sh
+install-jenkins.sh
+
+## Images
+The images/ directory contains screenshots to assist with each step of the process.
