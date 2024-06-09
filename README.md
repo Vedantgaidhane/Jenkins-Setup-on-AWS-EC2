@@ -30,7 +30,7 @@ This repository contains a detailed guide and necessary scripts to set up Jenkin
 
 Launch a new EC2 instance using Amazon Linux 2 AMI. Choose an instance type that fits your workload requirements. Follow the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html) for detailed steps.
 
-![EC2 Instance Creation](images/ec2-instance-creation.png)
+![EC2 Instance Creation](images/1.png)
 
 ### 2. Connect to the EC2 Instance
 
@@ -45,4 +45,14 @@ Update the package lists and install the Java Development Kit (JDK):
 ```bash
 sudo apt update
 sudo apt install openjdk-11-jre
+
+### 4. Add Jenkins Repository and Install Jenkins
+
+Import the Jenkins repository key and add the repository. Then, update the package lists and install Jenkins:
+
+```bash
+curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
 
