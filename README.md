@@ -58,3 +58,8 @@ sudo apt-get update
 sudo apt-get install jenkins
 ```
 
+5. Open Port 8080
+Edit the security group inbound rules to allow traffic on port 8080.
+![Edit Inbound Rules](images/4.png)
+
+
