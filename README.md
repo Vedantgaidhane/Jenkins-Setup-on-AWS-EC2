@@ -71,3 +71,14 @@ Edit the security group inbound rules to allow traffic on port 8080.
 ![Edit Inbound Rules](images/4.png)
 
 
+
+### 6. Unlock Jenkins
+Retrieve the initial administrative password to unlock Jenkins:
+```bash
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+![Edit Inbound Rules](images/5.png)
+
+
+### 7. Set Up Jenkins
+Access Jenkins through your browser by navigating to the public IP address of your EC2 instance followed by port 8080. Follow the setup wizard to install recommended plugins and create an admin user account.
