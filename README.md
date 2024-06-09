@@ -36,7 +36,7 @@ Launch a new EC2 instance using Amazon Linux 2 AMI. Choose an instance type that
 
 Use MobaXterm or another SSH client to connect to your EC2 instance securely using your private key.
 
-![MobaXterm Connection](images/mobaxtrem-connection.png)
+![MobaXterm Connection](images/mobaxtream.png)
 
 ### 3. Install Java JDK
 
