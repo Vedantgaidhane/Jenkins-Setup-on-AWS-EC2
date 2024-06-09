@@ -51,9 +51,13 @@ sudo apt update
 sudo apt install openjdk-11-jre
 ```
 
+### 4. Verify Java is Installed
 
+```bash
+java -version
+```
 
-### 4. Add Jenkins Repository and Install Jenkins
+### 5. Add Jenkins Repository and Install Jenkins
 
 Import the Jenkins repository key and add the repository. Then, update the package lists and install Jenkins:
 
@@ -65,25 +69,45 @@ sudo apt-get install jenkins
 ```
 
 
-
-### 5. Open Port 8080
+### 6. Open Port 8080
 Edit the security group inbound rules to allow traffic on port 8080.
 ![Edit Inbound Rules](images/4.png)
 
 
-### 6. Set Up Jenkins
+### 7. Set Up Jenkins
 Access Jenkins through your browser by navigating to the public IP address of your EC2 instance followed by port 8080. Follow the setup wizard to install recommended plugins and create an admin user account.
 ![Edit Inbound Rules](images/ip.png)
 
 
-### 7. Unlock Jenkins
+### 8. Unlock Jenkins
 Retrieve the initial administrative password to unlock Jenkins:
 ```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 ![Edit Inbound Rules](images/5.png)
 
-### 8. Jenkins is Ready!!
+### 9. Jenkins is Ready!!
 ![Edit Inbound Rules](images/Jenkins.png)
 
 
+### Once you are done with the above steps, it is better to restart Jenkins.
+```bash
+http://<ec2-instance-public-ip>:8080/restart
+```
+## Docker Slave Configuration
+Run the below command to Install Docker
+```bash
+sudo apt update
+sudo apt install docker.io
+```
+Grant Jenkins user and Ubuntu user permission to docker deamon.
+```bash
+sudo su - 
+usermod -aG docker jenkins
+usermod -aG docker ubuntu
+systemctl restart docker
+```
+Once you are done with the above steps, it is better to restart Jenkins again.
+```bash
+http://<ec2-instance-public-ip>:8080/restart
+```
