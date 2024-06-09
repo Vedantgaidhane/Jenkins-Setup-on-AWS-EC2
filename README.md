@@ -82,3 +82,4 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ### 7. Set Up Jenkins
 Access Jenkins through your browser by navigating to the public IP address of your EC2 instance followed by port 8080. Follow the setup wizard to install recommended plugins and create an admin user account.
+![Edit Inbound Rules](images/ip.png)
