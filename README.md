@@ -125,3 +125,7 @@ install-jenkins.sh
 
 ## Images
 The images/ directory contains screenshots to assist with each step of the process.
+
+## Contributing
+Contributions are welcome! If you find any issues or have improvements, feel free to open an issue or submit a pull request.
+
