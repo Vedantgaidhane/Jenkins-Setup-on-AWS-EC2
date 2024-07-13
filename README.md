@@ -50,7 +50,7 @@ Update the package lists and install the Java Development Kit (JDK):
 
 ```bash
 sudo apt update
-sudo apt install openjdk-11-jre
+sudo apt install openjdk-17-jre
 ```
 
 ### 4. Verify Java is Installed
